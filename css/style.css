@@ -1,0 +1,308 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+
+body{
+  background-color: #a2f5f8;
+  position: relative;
+  color: #444444; 
+}
+
+h1, h2, h3, h4{
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn-felgi{
+  border: solid 2px #555555;
+  height: 2em;
+  font-size: 1.5em;
+  line-height: 1.8em;
+  text-shadow: none;
+  font-weight: 500;
+  color: #00A87A;
+
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #A8DFD0 50%, #6ABEA7 50%);
+  -webkit-transition: background-position 0.4s;
+  -moz-transition: background-position 0.4s;
+  transition: background-position 0.4s;
+}
+
+.btn-felgi.select{
+   background-position: 0 +100%;
+   color: #ff6f00;
+}
+
+
+/**  Header Navigation **/
+
+header .navbar {
+  padding: 30px 0;
+  transition: all .5s ease-out;
+}
+
+header .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+header .navbar-default .navbar-nav a {
+  color: #6ABEA7;
+  padding: 5px 8px;
+  font-size: 1.4em;
+}
+
+header .navbar-default .navbar-nav a:hover {
+  color: #ff6f00;
+}
+
+header .navbar-default .navbar-nav .active a {
+  /*font-weight: 700;*/
+  color: #ff6f00;
+  background: transparent;
+  border-bottom: 4px solid #ff6f00;
+  text-shadow: none;
+}
+
+header .navbar-default .navbar-nav .active a:hover {
+  color: #ff6f00;
+  background: transparent;
+  text-shadow: none;
+}
+
+/**  Navbar Brand **/
+
+header .navbar-brand {
+  background: url(../images/felgi_logo.png);
+  background-repeat: no-repeat;
+  /*width: 125px;
+  height: 78px;*/
+  height: auto;
+  padding: 0px;
+}
+
+header .navbar-brand h1 {
+  color: transparent;
+  margin: 0px;
+  padding-bottom: 37px;
+}
+
+header .navbar-header a{
+  
+}
+
+header .navbar-default.inbody {
+    
+    background-color: rgba(42,75,65, .5);
+    /*color:#444;*/
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+header .navbar-default.inbody .navbar-brand{
+  background-size: 80px;
+}
+
+header .navbar-default.inbody .navbar-header h1{
+  padding-bottom: 15px;
+}
+
+/**  Navbar Toggle **/
+header .navbar-toggle {
+  background-color: #6ABEA7;
+}
+
+header .navbar-default .navbar-toggle .icon-bar {
+  /*background-color: white;*/
+}
+
+@media only screen
+and (max-width: 768px) {
+  header .navbar-collapse.in {
+    background-color: rgba(42,75,65, .5);
+  }
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+   
+}
+
+.top-banner .pageTitle{
+  background-color: #3293b5;
+  height: 200px;
+}
+
+.top-banner .pageTitle .titleContent{
+  position: relative;
+  top: 150px;
+  /*border: 1px solid blue;*/
+  text-align: center;
+  
+}
+
+.top-banner .pageTitle .titleContent h1{
+  font-weight: 200;
+  color: #666666;
+}
+
+.top-banner .pageTitle .titleContent h1 #subTitle{
+  font-weight: 400;
+  color: #555555;
+}
+
+.top-content{
+  margin-top: 10px;
+}
+
+.top-content h3{
+  font-size: 35px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+
+/** Page **/
+#underRepairImage{
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+/** Catalogue **/
+#filterOptionsHolder{
+  margin-bottom: 10px;
+}
+
+#itemsGallery a:link{
+  text-decoration: none;
+}
+
+/** Catalogue Item **/
+.catalogue-item {
+    margin-bottom: 25px;
+
+}
+
+.item_image{
+  background-color: #555555;
+  /*border: solid 1px #FFFFFF;*/
+  padding: 2px;
+  transition: all 0.3s ease 0s;
+}
+
+.item_image.select{
+  /*border: solid 1px #ff6f00;*/
+  padding: 2px;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.itemDetails{
+  color: #A8DFD0;
+}
+
+.itemDetails.select{
+  color: white;
+}
+
+.itemDetails h2{
+  font-size: 1.8em;
+}
+
+.itemPrice{
+  margin-bottom: 10px
+}
+
+/*
+.itemDetails button{
+  background: #0079a3;
+  color: #cce4ec;
+  font-family: Sans-serif;
+  font-size: 18px;
+  height: 40px;
+  width: 120px;
+  line-height: 30px;
+  text-align: center;
+  border: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.itemDetails .btn:hover{
+   background: #CF4647;
+  color: #FFFFFF;
+}
+*/
+
+.itemDetails .btn-felgi{
+  width: 150px;
+  position: relative;
+}
+
+
+/** SELECTED ITEM PAGE **/
+#itemHolder{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#btnBack{
+  margin-top: 10px;
+}
+
+
+/** CONTACT US PAGE **/
+#contactFormHolder{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-right: 2px solid #cccccc;
+}
+
+#contactDetails{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+#contactFormHolder h3, #contactDetails h3{
+  font-size: 35px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+@media only screen
+and (max-width: 970px) {
+
+  #contactFormHolder{
+    border-right: none;
+  }
+
+  #contactDetails{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+/** FOOTER STYLES **/
+footer{
+  background-color: grey;
+  color: white;
+  padding-bottom: 120px;
+}
+
+
+

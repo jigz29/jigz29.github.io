@@ -1,9 +1,206 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Felgi Test Home</title>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<h1>Hello Im Connected</h1>
+	
+	<header>
+		<!-- Navigation -->
+	    <nav class="navbar navbar-default navbar-fixed-top" id="topNavigation" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><h1>Felgi shop</h1></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="underConstruction.html">Testimonials</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div> <!-- /.navbar-collapse -->
+			</div><!-- END container -->
+		</nav><!-- END navbar -->
+	
+
+		<div class="carousel slide top-banner" id="featuredCarousel">
+			<!-- Indicators -->
+	        <ol class="carousel-indicators">
+	            <li data-target="#featuredCarousel" data-slide-to="0" class="active"></li>
+	            <li data-target="#featuredCarousel" data-slide-to="1"></li>
+	            <li data-target="#featuredCarousel" data-slide-to="2"></li>
+	        </ol>
+
+			<!-- Wrapper for slides -->
+	        <div class="carousel-inner">
+	            <div class="item active">
+	                <img src="images/slides/slide_1.jpg" alt="Fish">
+                	<div class="carousel-caption">
+                    	<h2>New Style</h2>
+                    	<p>The quick brown fox jumped over the lazy dogs.</p>
+                	</div><!-- carousel caption -->  
+	            </div>
+	            <div class="item">
+	                <img src="images/slides/slide_2.jpg" alt="Fish">
+                	<div class="carousel-caption">
+                    	<h2>Men</h2>
+                    	<p>The quick brown fox jumped over the lazy dogs.</p>
+                	</div><!-- carousel caption -->  
+	            </div>
+	            <div class="item">
+	                <img src="images/slides/slide_3.jpg" alt="Fish">
+                	<div class="carousel-caption">
+                    	<h2>Kids</h2>
+                    	<p>The quick brown fox jumped over the lazy dogs.</p>
+                	</div><!-- carousel caption -->  
+	            </div>
+	        </div><!-- End carousel-inner -->
+		</div><!-- End carousel -->
+			
+	</header>
+	
+	<div class="container" id="main">
+		<div class="row top-content">
+			<div class="col-lg-12">
+				<h3>Hello, world!</h3>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4><i class="fa fa-fw fa-check"></i>Topic 1</h4>
+					</div>
+					<div class="panel-body">
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+	                    <a href="#" class="btn btn-default">Learn More</a>
+	                </div>
+				</div>
+			</div> <!-- end col-md-4 -->
+
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4><i class="fa fa-fw fa-compass"></i>Topic 1</h4>
+					</div>
+					<div class="panel-body">
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+	                    <a href="#" class="btn btn-default">Learn More</a>
+	                </div>
+				</div>
+			</div> <!-- end col-md-4 -->
+
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4><i class="fa fa-fw fa-gift"></i>Topic 1</h4>
+					</div>
+					<div class="panel-body">
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+	                    <a href="#" class="btn btn-default">Learn More</a>
+	                </div>
+				</div>
+			</div> <!-- end col-md-4 -->
+
+		</div><!-- end row -->
+
+		<div class="row" id="featuredItems">
+			<div class="col-lg-12">
+                <h2 class="page-header">Featured Items</h2>
+            </div>
+
+            <!--
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div> -->
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+
+			<div class='col-md-4 col-sm-6 catalogue-item'>
+		    	<a itemID="  " href='#'>
+		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+		    	</a>
+			</div>
+			
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+        <footer>
+        	<div class="container">
+        		<div class="row">
+	                <div class="col-lg-12">
+	                    <p>Copyright &copy; Your Website 2014</p>
+	                </div>
+	            </div>
+	            <!-- /.row -->
+        	</div>
+            
+        </footer>
+	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/catalogue.js"></script>
+	<script type="text/javascript" src="js/myscript.js"></script>
+
 </body>
 </html>
