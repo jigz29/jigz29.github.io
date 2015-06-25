@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
 
 body{
-  background-color: #a2f5f8;
+  /*background-color: #a2f5f8;*/
+  background-color: #D1F8FF;
   position: relative;
   color: #444444; 
 }
@@ -195,7 +196,7 @@ and (max-width: 768px) {
 /** Catalogue Item **/
 .catalogue-item {
   margin-bottom: 25px;
-  /*display: none;*/
+  display: none;
 }
 
 .item_image{
@@ -214,6 +215,7 @@ and (max-width: 768px) {
 
 .itemDetails{
   color: #A8DFD0;
+  display: none;
 }
 
 .itemDetails.select{

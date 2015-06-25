@@ -91,23 +91,9 @@ $(function($) {
 		        totalPages: numPages,
 		        onPageClicked: onPageClick
 		    }
-
 		    pageNav.bootstrapPaginator(options);
 		    pageNav.css("visibility", "visible");
 		    buildGallery(aryFilteredData, 1);
-
-		    $('.item_image').oLoader({
-		        waitLoad: true,
-		        fadeLevel: 0.9,
-		        backgroundColor: '#fff',
-		        style:0,
-		        image: 'images/loader/loader2.gif',
-		        complete:function(){
-		        	ctrImageLoaded++;
-		        	//if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
-		        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);
-		        }
-	      	});
 
 		}else{
 			$("#itemsGallery").html("");
@@ -166,13 +152,14 @@ $(function($) {
 	function buildGallery(_aryData, _page){
 		var index =(_page - 1) * perPage;
 		var limit = index + perPage;
+		console.log("-- limit " + limit);
 
 		if(limit > numItems) limit = numItems;
 		$("#itemsGallery").html("");
 		ctrImageLoaded = 0;
-		totalPageItems = limit;
+		totalPageItems = (limit - index);
 
-		console.log("first: " + index + "  limit: " + limit);
+		//console.log("first: " + index + "  limit: " + limit);
 
 		for(i=index; i<limit; i++){
 			//console.log("index: " + i);
@@ -183,9 +170,25 @@ $(function($) {
 
 		// -- SET SELECTED PAGE ON ITEM CLICK -- //
 		$('.catalogue-item a').click(onItemClick);
-
 		// -- SET ITEM HOVER ANIMATION --//
 		$('.catalogue-item').hover( onItemHover, onItemOut);
+
+		$('.item_image').oLoader({
+	        waitLoad: true,
+	        fadeLevel: 0.9,
+	        backgroundColor: '#fff',
+	        style:0,
+	        image: 'images/loader/loader2.gif',
+	        complete:function(){
+	        	ctrImageLoaded++;
+	        	//if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
+	        	if(ctrImageLoaded === totalPageItems) {
+	        		$(".catalogue-item").show();
+	        		$(".itemDetails").fadeIn(600);
+	        	}
+	        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);
+	        }
+      	});
 	}
 
 	// -- ITEM CATEGROY CLASS -- //
