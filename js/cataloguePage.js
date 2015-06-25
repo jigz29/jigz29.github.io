@@ -104,7 +104,7 @@ $(function($) {
 		        image: 'images/loader/loader2.gif',
 		        complete:function(){
 		        	ctrImageLoaded++;
-		        	if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
+		        	//if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
 		        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);
 		        }
 	      	});
