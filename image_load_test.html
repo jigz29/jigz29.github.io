@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#content{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			margin-top: 30px;
+		}
+
+		#content .child1{
+			width: 50px;
+			height: 50px;
+			border: 1px solid blue;
+		}
+
+		#content .child2{
+			top: 0px;
+			width: 50px;
+			height: 50px;
+			border: 1px solid green;
+			background-color: green;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<div class="child1"></div>
+		<div class="child2"></div>
+	</div>
+
+	<button id="btnShow">Show</button><button id="btnHide">Hide</button>
+	<div id="image-container">
+		
+		<img src="images/fats_1.jpg" style="width:300px; height:600px"></img>
+		<img src="images/fats_2.jpg" style="width:300px; height:600px"></img>
+		<img src="images/fats_3.jpg" style="width:300px; height:600px"></img>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.oLoader.min.js"></script>
+	<script type="text/javascript">
+
+		$(function($) {
+			console.log("-- page loaded --");
+
+			$('#image-container img').oLoader({
+		        waitLoad: true,
+		        fadeLevel: 0.9,
+		        backgroundColor: '#fff',
+		        style:0,
+		        image: 'images/loader/loader2.gif',
+		        complete:function(){
+		        	console.log("-- image loaded --");
+		        }
+	      	});
+
+			$( document ).ready(function() {
+				$('#btnShow').click(function(){
+					console.log("show clicked");
+					$('#image-container img').oLoader({
+					  backgroundColor:'#f00',
+					  fadeInTime: 500,
+					  fadeOutTime: 1000,
+					  fadeLevel: 0.5
+					});
+				});
+
+				$('#btnHide').click(function(){
+					console.log("hide clicked");
+					$('#image-container img').oLoader('hide');
+				});
+			});
+		}(jQuery));
+
+	</script>
+</body>
+</html>
