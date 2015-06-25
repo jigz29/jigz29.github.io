@@ -7,6 +7,8 @@ $(function($) {
 	var numItems = 0;
 	var numPages = 0;
 	var currPage = 0;
+	var totalPageItems = 0;
+	var ctrImageLoaded = 0;
 	var currCategory = "";
 	var currSection = "";
 	var aryCategory = [];
@@ -14,7 +16,6 @@ $(function($) {
 	var aryFilteredData = [];
 	
 	$( document ).ready(function() {
-	  // console.log(" num items: " + obj.catalogue.length);
 	   console.log(" num items: " + numPages);
 
 	    // -- INITIALIZE -- //
@@ -26,14 +27,11 @@ $(function($) {
 		currCategory = aryCategory[0];
 		currSection = arySection[0];
 		setupGallery(oData.catalogue, currCategory, currSection);
+
 	});
 
 	// -- PAGINATION PAGE CLICK EVENT -- //
 	function onPageClick(_evt, _origEvent, _type, _page){
-		//console.log(" _evt: " + _evt);
-    	//console.log(" _origEvent: " + _origEvent);
-    	//console.log(" _type: " + _type);
-    	//console.log(" _page: " + _page);
     	console.log(" page: " +_page);
     	buildGallery(aryFilteredData, _page);
 	}
@@ -50,42 +48,10 @@ $(function($) {
 		setupGallery(oData.catalogue, currCategory, currSection);
 	}
 
-	function setupGallery(_aryData, _category, _section){
-		aryFilteredData = filteredCategoryList( _aryData, _category, _section );
-		var pageNav = $('#pageNav');
-
-		if(aryFilteredData.length > 0) {
-			numItems = aryFilteredData.length;
-			numPages = Math.ceil(numItems/perPage);
-
-		    // -- PAGINATION -- //
-		    var options = {
-		        bootstrapMajorVersion:3,
-		        currentPage: 1,
-		        numberOfPages: numPages,
-		        totalPages: numPages,
-		        onPageClicked: onPageClick
-		    }
-
-		    pageNav.bootstrapPaginator(options);
-		    pageNav.css("visibility", "visible");
-		    buildGallery(aryFilteredData, 1);
-		}else{
-			$("#itemsGallery").html("");
-			pageNav.css("visibility", "hidden");
-		}
-
-		//-- SET CATEGORY CURRENT TITLE --//
-		var strTitle = "<h1>" + _category.toUpperCase() + "<span id='subTitle'>" + _section.toUpperCase() + "</span></h1>";
-		$('.titleContent').html( strTitle );
-		
-	}
-
 	// -- EVENTS --//
 	function onItemClick(){
 		//console.log("-- clicked --");
 		var itemID = $(this).attr('itemID');
-		//console.log("==>> clicked: " + itemID);
     	window.location = "itemPage.html?itemID=" + itemID;
 	}
 
@@ -105,6 +71,53 @@ $(function($) {
 		$(el).removeClass('select');
 		$(eItemDetails).removeClass('select');
 		$(eBtn).removeClass('select');
+	}
+
+	function setupGallery(_aryData, _category, _section){
+		aryFilteredData = filteredCategoryList( _aryData, _category, _section );
+		var pageNav = $('#pageNav');
+
+
+
+		if(aryFilteredData.length > 0) {
+			numItems = aryFilteredData.length;
+			numPages = Math.ceil(numItems/perPage);
+
+		    // -- PAGINATION -- //
+		    var options = {
+		        bootstrapMajorVersion:3,
+		        currentPage: 1,
+		        numberOfPages: numPages,
+		        totalPages: numPages,
+		        onPageClicked: onPageClick
+		    }
+
+		    pageNav.bootstrapPaginator(options);
+		    pageNav.css("visibility", "visible");
+		    buildGallery(aryFilteredData, 1);
+
+		    $('.item_image').oLoader({
+		        waitLoad: true,
+		        fadeLevel: 0.9,
+		        backgroundColor: '#fff',
+		        style:0,
+		        image: 'images/loader/loader2.gif',
+		        complete:function(){
+		        	ctrImageLoaded++;
+		        	if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
+		        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);
+		        }
+	      	});
+
+		}else{
+			$("#itemsGallery").html("");
+			pageNav.css("visibility", "hidden");
+		}
+
+		//-- SET CATEGORY CURRENT TITLE --//
+		var strTitle = "<h1>" + _category.toUpperCase() + "<span id='subTitle'>" + _section.toUpperCase() + "</span></h1>";
+		$('.titleContent').html( strTitle );
+		
 	}
 
 	// -- GET FILTERED CATEGORY / SECTION LIST -- //
@@ -153,16 +166,20 @@ $(function($) {
 	function buildGallery(_aryData, _page){
 		var index =(_page - 1) * perPage;
 		var limit = index + perPage;
+
 		if(limit > numItems) limit = numItems;
-		console.log("first: " + index + "  limit: " + limit);
 		$("#itemsGallery").html("");
+		ctrImageLoaded = 0;
+		totalPageItems = limit;
+
+		console.log("first: " + index + "  limit: " + limit);
+
 		for(i=index; i<limit; i++){
 			//console.log("index: " + i);
 			var item = new ItemCategory(_aryData[i]);
 			
 			$("#itemsGallery").append(item.itemTag);
 		}
-		//console.log("-----------");
 
 		// -- SET SELECTED PAGE ON ITEM CLICK -- //
 		$('.catalogue-item a').click(onItemClick);
@@ -181,19 +198,10 @@ $(function($) {
 		        	"<h2>"+ _oItemData.name +"</h2>" +
 		        	"<h4 class='itemPrice'>price: " + _oItemData.price + "</h4>" +
 		        	"<div class='btn-felgi center-block'>View Details</div>" +
-		        	//"<button type='button' class='btn'>View Details</button>" +
 		    	"</div>" +
 		    "</a>"+
 		"</div>";
 
-	}
-
-	function setCookie(_cookieName, _cookieValue, _nDays) {
-	 	var today = new Date();
-	 	var expire = new Date();
-	 	if (_nDays==null || _nDays==0) _nDays = 1;
-	 	expire.setTime(today.getTime() + 3600000 * 24 * _nDays);
-	 	document.cookie = _cookieName + "=" + escape(_cookieValue) + ";expires=" + expire.toGMTString();
 	}
 
 

@@ -194,8 +194,8 @@ and (max-width: 768px) {
 
 /** Catalogue Item **/
 .catalogue-item {
-    margin-bottom: 25px;
-
+  margin-bottom: 25px;
+  display: none;
 }
 
 .item_image{
