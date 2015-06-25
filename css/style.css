@@ -49,6 +49,7 @@ header .navbar-default .navbar-nav a {
   color: #6ABEA7;
   padding: 5px 8px;
   font-size: 1.4em;
+  text-shadow: none;
 }
 
 header .navbar-default .navbar-nav a:hover {
