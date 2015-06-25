@@ -4,7 +4,7 @@ var oData = {
 	featuredItems:["ls0008","ls0029","ls0017","ls00013","ls0021","ls0030"],
 	catalogue:[
 		{ "id":"ls0001" , 
-		"name":"White Polka dot Dress" ,
+		"name":"White Polka dot Dress test" ,
 		"category":"child" ,
 		"section":"dress" ,
 		"details":"Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit." ,

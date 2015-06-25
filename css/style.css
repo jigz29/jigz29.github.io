@@ -2,9 +2,11 @@
 
 body{
   /*background-color: #a2f5f8;*/
-  background-color: #D1F8FF;
+
+  background-color: #EFF4F7;
   position: relative;
   color: #444444; 
+  text-shadow: none;
 }
 
 h1, h2, h3, h4{
@@ -19,6 +21,7 @@ h1, h2, h3, h4{
   line-height: 1.8em;
   text-shadow: none;
   font-weight: 500;
+  text-align: center;
   color: #00A87A;
 
   background-size: 100% 200%;
@@ -199,31 +202,35 @@ and (max-width: 768px) {
   display: none;
 }
 
+.catalogue-item-content{
+  border: solid 1px #C0C0C0;
+  border-radius: 5px;
+}
+
 .item_image{
-  background-color: #555555;
-  /*border: solid 1px #FFFFFF;*/
-  padding: 2px;
+  /*background-color: #555555;*/
+  padding: 10px;
   transition: all 0.3s ease 0s;
 }
 
 .item_image.select{
-  /*border: solid 1px #ff6f00;*/
+  /*border: solid 1px #ff6f00;
   padding: 2px;
   opacity: 0.8;
-  filter: alpha(opacity=80); /* For IE8 and earlier */
+  filter: alpha(opacity=80);*/ /* For IE8 and earlier */
 }
 
 .itemDetails{
-  color: #A8DFD0;
+  color: #555555;
   display: none;
 }
 
 .itemDetails.select{
-  color: white;
+  /*color: white;*/
 }
 
-.itemDetails h2{
-  font-size: 1.8em;
+.itemDetails h4, .itemDetails p{
+  text-align: center;
 }
 
 .itemPrice{
@@ -253,6 +260,7 @@ and (max-width: 768px) {
 .itemDetails .btn-felgi{
   width: 150px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 
@@ -305,6 +313,9 @@ footer{
   background-color: grey;
   color: white;
   padding-bottom: 120px;
+  /*position: fixed;
+  padding-bottom: 120px;
+  bottom: 0px;*/
 }
 
 

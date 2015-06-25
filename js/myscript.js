@@ -1,7 +1,7 @@
 $(function($) {
 	"use strict";
 
-	var mainbottom = $('.top-banner').offset().top + $('.top-banner').height() - 50;
+	var mainbottom = $('.top-banner').offset().top + $('.top-banner').height() - 60;
 	var stop = 0;
 	// on scroll, 
 	$(window).on('scroll',function(){

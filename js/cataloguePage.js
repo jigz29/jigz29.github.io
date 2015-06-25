@@ -195,14 +195,14 @@ $(function($) {
 	function ItemCategory(_oItemData){
 		//console.log(_oItemData);
 		this.itemTag = "<div class='col-lg-3 col-sm-4 col-xs-6 catalogue-item'>"+
-		    "<a itemID=" + _oItemData.id + " href='#'>"+
+		    "<div class='catalogue-item-content'><a itemID=" + _oItemData.id + " href='#'>"+
 		        "<img class='img-responsive item_image' src="+ _oItemData.image +" alt=''>"+
-		        "<div class='itemDetails carousel-caption'>"+
-		        	"<h2>"+ _oItemData.name +"</h2>" +
-		        	"<h4 class='itemPrice'>price: " + _oItemData.price + "</h4>" +
+		        "<div class='itemDetails'>"+
+		        	"<h4>"+ _oItemData.name +"</h4>" +
+		        	"<p class='itemPrice'>price: " + _oItemData.price + "</p>" +
 		        	"<div class='btn-felgi center-block'>View Details</div>" +
 		    	"</div>" +
-		    "</a>"+
+		    "</a></div>"+
 		"</div>";
 
 	}
