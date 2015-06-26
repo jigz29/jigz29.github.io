@@ -183,7 +183,7 @@ $(function($) {
 	        	ctrImageLoaded++;
 	        	//if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
 	        	if(ctrImageLoaded === totalPageItems) {
-	        		$(".catalogue-item").show();
+	        		//$(".catalogue-item").show();
 	        		$(".itemDetails").fadeIn(600);
 	        	}
 	        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);

@@ -199,7 +199,7 @@ and (max-width: 768px) {
 /** Catalogue Item **/
 .catalogue-item {
   margin-bottom: 25px;
-  display: none;
+  /*display: none;*/
 }
 
 .catalogue-item-content{
