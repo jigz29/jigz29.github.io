@@ -136,47 +136,88 @@
             </div>
 
             <!--
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div> -->
+            "<div class='col-lg-3 col-md-3 col-sm-6 catalogue-item'>"+
+			    "<div class='catalogue-item-content'><a itemID=" + _oItemData.id + " href='#'>"+
+			        "<img class='img-responsive item_image' src="+ _oItemData.image +" alt=''>"+
+			        "<div class='itemDetails'>"+
+			        	"<h4>"+ _oItemData.name +"</h4>" +
+			        	"<p class='itemPrice'>price: " + _oItemData.price + "</p>" +
+			        	"<button type='button' class='btn btn-info center-block' data-toggle='modal' data-target='.productBox'>Buy Now</button>" +
+			    	"</div>" +
+			    "</a></div>"+
+			"</div>"; -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 
 			<div class='col-md-4 col-sm-6 catalogue-item'>
-		    	<a itemID="  " href='#'>
+				<div class='catalogue-item-content'>
 		        	<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
-		    	</a>
-			</div>
+		        	<div class='itemDetails'>
+						<h4 class="itemName">Product 1</h4>
+						<p class='itemPrice'>price: 200.00</p>
+
+			        	<button type='button' class='btn btn-info center-block' data-toggle='modal'>Buy Now</button>
+		        	</div>
+		    	</div>
+			</div><!-- End catalogue item -->
 			
 
 		</div>
@@ -187,7 +228,7 @@
 
  
 
-	<div id="largeModal" class="modal fade bs-example-modal-lg productBox" tabindex="-1" role="dialog">
+	<div id="largeModal" class="modal fade bs-example-modal-lg productModal" tabindex="-1" role="dialog">
 	    <div class="modal-dialog modal-lg">
 	        <div class="modal-content modal-content-product">
 	            <div class="modal-header">

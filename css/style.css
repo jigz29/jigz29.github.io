@@ -227,13 +227,12 @@ header .navbar-default .navbar-toggle .icon-bar {
   margin-bottom: 10px;
 }
 
-#itemsGallery a:link{
-  text-decoration: none;
-}
-
-/** Catalogue Item **/
 .catalogue-item {
   margin-bottom: 25px;
+}
+
+.catalogue-item a:link{
+  text-decoration: none;
 }
 
 .catalogue-item-content{
@@ -267,8 +266,11 @@ header .navbar-default .navbar-toggle .icon-bar {
   text-align: center;
 }
 
+.itemDetails .btn{
+  margin-bottom: 10px;
+}
+
 .itemPrice {
-  margin-top: 30px;
   margin-bottom: 10px
 }
 
@@ -333,8 +335,7 @@ header .navbar-default .navbar-toggle .icon-bar {
   margin-bottom: 10px;
 }
 
-@media only screen
-and (max-width: 970px) {
+@media only screen and (max-width: 970px) {
 
   #contactFormHolder{
     border-right: none;
