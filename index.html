@@ -92,31 +92,32 @@
 			</div>
 			
 			<div class="col-md-4">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h4><i class="fa fa-fw fa-check"></i>Topic 1</h4>
 					</div>
 					<div class="panel-body">
 	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-	                    <a href="#" class="btn btn-default">Learn More</a>
+	                    <!--<a href="#" class="btn btn-default">Learn More</a>-->
+	                    <button type="button" class="btn btn-info" data-toggle="modal" data-target=".productBox">Buy Now</button>
 	                </div>
 				</div>
 			</div> <!-- end col-md-4 -->
 
 			<div class="col-md-4">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h4><i class="fa fa-fw fa-compass"></i>Topic 1</h4>
 					</div>
 					<div class="panel-body">
 	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-	                    <a href="#" class="btn btn-default">Learn More</a>
+	                    <button type="button" class="btn btn-info" id="btn2" data-toggle="modal" >Buy Now</button>
 	                </div>
 				</div>
 			</div> <!-- end col-md-4 -->
 
 			<div class="col-md-4">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h4><i class="fa fa-fw fa-gift"></i>Topic 1</h4>
 					</div>
@@ -179,7 +180,58 @@
 			
 
 		</div>
+
 	</div>
+
+	
+
+ 
+
+	<div id="largeModal" class="modal fade bs-example-modal-lg productBox" tabindex="-1" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	        <div class="modal-content modal-content-product">
+	            <div class="modal-header">
+	            	
+	                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	              		<h3 class="modal-title">Large Modal</h3>
+
+	            </div>
+	            <div class="modal-body">
+	                
+		            <row>
+		            	<div class='col-lg-4 col-sm-6'>
+		            		<img class='img-responsive item_image' src="images/products/item_2.jpg" alt=''>
+						</div>
+						<div class='col-lg-6 col-sm-6'>
+			               
+			                <span class="itemModalDescription">Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </span>
+							
+							<div class="dropdown drp-modal-size">
+							  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							    Select Size 
+							    <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="#">SMALL</a></li>
+							    <li><a href="#">MEDIUM</a></li>
+							    <li><a href="#">LARGE</a></li>
+							  </ul>
+							</div>
+
+							<h3 class="itemPrice">PHP 200.00</h3>
+			                <button type="button" class="btn btn-primary">ADD TO CART</button>
+
+		                </div>
+		            </row>
+		    	
+		            
+	            </div>
+
+	        </div>
+
+	    </div>
+
+	</div><!--END Product Modal -->
 
 	<!-- Footer -->
         <footer>
