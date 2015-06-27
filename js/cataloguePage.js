@@ -183,7 +183,6 @@ $(function($) {
 	        	ctrImageLoaded++;
 	        	//if(ctrImageLoaded === totalPageItems) $(".catalogue-item").show();
 	        	if(ctrImageLoaded === totalPageItems) {
-	        		//$(".catalogue-item").show();
 	        		$(".itemDetails").fadeIn(600);
 	        	}
 	        	//console.log("-- image loaded -- " + ctrImageLoaded + " pages: " + totalPageItems);
@@ -194,7 +193,7 @@ $(function($) {
 	// -- ITEM CATEGROY CLASS -- //
 	function ItemCategory(_oItemData){
 		//console.log(_oItemData);
-		this.itemTag = "<div class='col-lg-3 col-sm-4 col-xs-6 catalogue-item'>"+
+		this.itemTag = "<div class='col-lg-3 col-md-3 col-sm-6 catalogue-item'>"+
 		    "<div class='catalogue-item-content'><a itemID=" + _oItemData.id + " href='#'>"+
 		        "<img class='img-responsive item_image' src="+ _oItemData.image +" alt=''>"+
 		        "<div class='itemDetails'>"+

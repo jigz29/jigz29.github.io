@@ -1,6 +1,10 @@
 $(function($) {
 	"use strict";
 
+	$('.carousel').carousel({
+	  interval: 2000
+	})
+
 	var mainbottom = $('.top-banner').offset().top + $('.top-banner').height() - 60;
 	var stop = 0;
 	// on scroll, 
@@ -34,6 +38,7 @@ $(function($) {
 	
 	// -- SHOW ANIMATE IMAGES --//
 	$( document ).ready(function() {
+
 		var aryFeatured= oData.featuredItems;
 		var el = $('#featuredItems');
 		var el1 = el.children(".catalogue-item");
@@ -43,5 +48,8 @@ $(function($) {
 		});
 		
 	});
+
+
+
 
 }(jQuery));
