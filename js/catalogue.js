@@ -1,7 +1,7 @@
 var oData = {
 	categoryItems:["all", "women", "men", "child"],
 	sectionItems:["all", "dress", "t-shirt", "onesies", "pants", "sando", "cap"],
-	featuredItems:["ls0008","ls0029","ls0017","ls00013","ls0021","ls0030"],
+	featuredItems:["ls0008","ls0029","ls0017","ls0013","ls0021","ls0030"],
 	catalogue:[
 		{ "id":"ls0001" , 
 		"name":"White Polka dot Dress test" ,
@@ -279,7 +279,7 @@ var oData = {
 		"section":"cap" ,
 		"details":"The quick brown fox jumped over the lazy dogs" ,
 		"size":["small", "medium", "large"],
-		"price":"200.00" ,
+		"price":"900.00" ,
 		"quantity":"5",
 		"image": "images/products/item_28.jpg" },
 
@@ -289,7 +289,7 @@ var oData = {
 		"section":"pants" ,
 		"details":"The quick brown fox jumped over the lazy dogs" ,
 		"size":["small", "medium", "large"],
-		"price":"200.00" ,
+		"price":"890.00" ,
 		"quantity":"5",
 		"image": "images/products/item_29.jpg" },
 
@@ -299,7 +299,7 @@ var oData = {
 		"section":"pants" ,
 		"details":"The quick brown fox jumped over the lazy dogs" ,
 		"size":["small", "medium", "large"],
-		"price":"200.00" ,
+		"price":"1300.00" ,
 		"quantity":"5",
 		"image": "images/products/item_30.jpg" },
 
