@@ -28,6 +28,7 @@ $(function($) {
 		currSection = arySection[0];
 		setupGallery(oData.catalogue, currCategory, currSection);
 
+		//initProductModal();
 	});
 
 	// -- PAGINATION PAGE CLICK EVENT -- //
@@ -162,14 +163,17 @@ $(function($) {
 		//console.log("first: " + index + "  limit: " + limit);
 
 		for(i=index; i<limit; i++){
-			//console.log("index: " + i);
+			console.log("index: " + i);
 			var item = new ItemCategory(_aryData[i]);
 			
 			$("#itemsGallery").append(item.itemTag);
+			$(".catalogue-item").data("dataVO", _aryData[i]);
+			var temp = $(".catalogue-item").data("dataVO");
+			console.log(temp.name);
 		}
 
 		// -- SET SELECTED PAGE ON ITEM CLICK -- //
-		$('.catalogue-item a').click(onItemClick);
+		//$('.catalogue-item a').click(onItemClick);
 		// -- SET ITEM HOVER ANIMATION --//
 		$('.catalogue-item').hover( onItemHover, onItemOut);
 
@@ -204,6 +208,27 @@ $(function($) {
 		    "</a></div>"+
 		"</div>";
 
+
+	}
+
+	// -- This will initialize the item modal -- //
+	function initProductModal(){
+		console.log("-- init modal --");
+		$('.catalogue-item').click(function(){
+			currItemDataVO = $(this).data('dataVO');
+
+			$('.modal-title').text(currItemDataVO.name);
+			$('.modal-body .item_image').attr("src", currItemDataVO.image);
+			$('.modal-body .itemModalDescription').text(currItemDataVO.details);
+			$('.modal-body .itemPrice').text(currItemDataVO.price);
+			
+			$(".productModal").modal('show');
+		});
+
+		$('.productModal').on('show.bs.modal', function (event) {
+			//var modal = $(this);
+			//modal.find('.modal-title').text("Product Title");
+		});
 	}
 
 

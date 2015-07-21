@@ -41,8 +41,9 @@ $(function($) {
 
 		if(aryFeaturedItems.length > 0){
 			initFeaturedItems(aryFeaturedData, aryFeaturedItems);	// -- populate featured items elements//
-			initProductModal();
+			
 		}
+		initProductModal();
 	}
 
 	function getItemInCatalogue(_itemID, _aryCatalogue){
@@ -93,11 +94,13 @@ $(function($) {
 
 	// -- This will initialize the item modal -- //
 	function initProductModal(){
+		console.log("-- init my script modal --");
 		$('.catalogue-item').click(function(){
-			currItemDataVO = $(this).data('dataVO');
 
+			currItemDataVO = $(this).data('dataVO');
+			console.log("-- click -- " + currItemDataVO.name);
 			$('.modal-title').text(currItemDataVO.name);
-			$('.modal-body .item_image').attr("src", currItemDataVO.image);
+			$('.modal-body .itemImage').attr("src", currItemDataVO.image);
 			$('.modal-body .itemModalDescription').text(currItemDataVO.details);
 			$('.modal-body .itemPrice').text(currItemDataVO.price);
 			
