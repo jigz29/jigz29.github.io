@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Felgi Shopping Cart</title>
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	
+	<header>
+		<!-- Navigation -->
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><h1>Felgi <span class="subhead">Variety Shop</span></h1></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="underConstruction.html">Testimonials</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                        <li><a href="checkout.html"><span id="cartItems">(0)</span>Cart</a></li>
+                    </ul>
+                </div> <!-- /.navbar-collapse -->
+			</div><!-- END container -->
+		</nav><!-- END navbar -->
+
+        <div class="top-banner">
+            
+            <div class="pageTitle">
+                <div class="container">
+                     <div class="titleContent">
+                         <!--<h1>WOMEN<span id="subTitle">DRESS</span></h1> -->
+                         <h1>SHOPPING<span id="subTitle">CART</span></h1>
+                     </div>
+                </div>
+            </div>
+            
+        </div>
+			
+	</header>
+	
+	<div class="container">
+		
+        <!--Products Row -->
+        <div class="row" id="checkoutItems">
+
+            <!--
+            <div class="row" class="checkoutItem">
+                <div class='col-lg-2  col-md-2 col-sm-4 col-xs-4'>
+                    <img class='img-responsive itemImage' src="images/products/item_2.jpg" alt=''>   
+                </div>
+
+                <div class='col-lg-6 col-md-6 col-sm-6 col-xs-6 cartItemDetails'>
+                    
+                    <h4 class="itemName">Product 1</h4>
+                    
+                    <button type='button'>Remove</button>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-2 col-xs-2 cartItemDetails'>
+                    <h4 class='itemPrice'>Price: 200.00</h4>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="row" id="checkoutTotalPanel">
+            <div class="">
+                <h4 id='totalPrice'>Grand Total: P999.99</h4>
+                <button type='button'>Checkout</button>
+            </div>
+        </div>
+		
+	</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        
+    </footer>
+
+	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/catalogue.js"></script>
+    <script type="text/javascript" src="js/shoppingCart.js"></script>
+    <script type="text/javascript" src="js/checkoutPage.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+
+</body>
+</html>

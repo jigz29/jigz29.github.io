@@ -238,15 +238,17 @@ header .navbar-default .navbar-toggle .icon-bar {
 .catalogue-item-content{
   border: solid 1px #C0C0C0;
   border-radius: 5px;
+  /*min-width: 360px;
+  min-height: 576.7px;*/
 }
 
-.item_image{
+.itemImage{
   /*background-color: #555555;*/
   padding: 10px;
   transition: all 0.3s ease 0s;
 }
 
-.item_image.select{
+.itemImage.select{
   /*border: solid 1px #ff6f00;
   padding: 2px;
   opacity: 0.8;
@@ -347,6 +349,17 @@ header .navbar-default .navbar-toggle .icon-bar {
   }
 }
 
+.cartItemDetails h4{
+  padding-top: 10px;
+}
+
+.cartItemDetails .itemPrice{
+  text-align: right;
+}
+
+#checkoutTotalPanel > div{
+  text-align: right;
+}
 
 /** FOOTER STYLES **/
 footer{
